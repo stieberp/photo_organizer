@@ -1,9 +1,9 @@
 import os
 import shutil
+from pathlib import Path
 
+import click
 from PIL import Image, ExifTags
-
-PHOTO_DIRECTORY = ''
 
 
 def get_date(path):
@@ -45,5 +45,16 @@ def orgainze_photos(dir):
                 shutil.move(path, dest_path)
 
 
+@click.command()
+@click.option(
+    '-d',
+    '--directory',
+    prompt='photo directory',
+    help='directory with pictures',
+)
+def main(directory):
+    orgainze_photos(Path(directory))
+
+
 if __name__ == '__main__':
-    orgainze_photos()
+    main()
