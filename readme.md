@@ -30,3 +30,7 @@ This project requires Python 3.9
   photo_organizer.exe -d C:/photos
   ```
 
+## Run it without building
+```
+    orgainze_photos(Path('C:/photos'))  
+```
