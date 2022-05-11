@@ -1,9 +1,10 @@
 # Photo Organizer
 
-A quick and dirty script to organize photos by year and month.
+A quick and dirty script to organize photos by year and month. 
 This script looks at the photo's metadata to get the date, and 
 will put photos into directories named like YYYY-MM. 
-If the photo doesn't have a metadata date, it will be placed in a 'no_date' directory.
+If the photo doesn't have a metadata date, it will be placed in a 'no_date' directory.  
+Only tested to work with jpg photos for now.
 
 ## Developer Setup Instructions
 
@@ -26,11 +27,16 @@ This project requires Python 3.9
 - Setup a virtual environment
 - Install the requirements
 - run the executable from the command line  
-  ```
+  ``` commandline
   photo_organizer.exe -d C:/photos
   ```
 
 ## Run it without building
-```
+``` python
     orgainze_photos(Path('C:/photos'))  
+```
+
+## Run black formatting
+```commandline
+black --config pyproject.toml .
 ```
